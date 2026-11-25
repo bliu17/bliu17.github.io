@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill Liu — Quantitative Research</title>
+<meta name="description" content="Personal homepage of Bill Liu: quantitative equity research, portfolio construction and risk.">
+<style>
+  :root {
+    --text: #1f2328;
+    --muted: #5b6470;
+    --link: #1a5fb4;
+    --rule: #e3e6ea;
+    --tag-bg: #eef3fa;
+    --tag-text: #1a5fb4;
+    --wip-bg: #fdf3e1;
+    --wip-text: #9a5b00;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+    background: #fff;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav .inner {
+    max-width: 880px; margin: 0 auto; padding: 12px 24px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+  }
+  nav .name { font-weight: 600; color: var(--text); }
+  nav .links a { margin-left: 20px; color: var(--muted); font-size: 15px; }
+  nav .links a:hover { color: var(--link); text-decoration: none; }
+
+  main { max-width: 880px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  .hero { display: flex; gap: 36px; align-items: flex-start; }
+  .hero img {
+    width: 180px; height: 180px; object-fit: cover; border-radius: 50%;
+    flex-shrink: 0; background: #eef0f3;
+  }
+  .hero h1 { margin: 0 0 4px; font-size: 32px; font-weight: 650; }
+  .hero .title { color: var(--muted); margin: 0 0 14px; }
+  .hero p { margin: 0 0 12px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 14px; font-size: 15px; }
+
+  .callout {
+    margin-top: 18px; padding: 12px 16px; border-left: 3px solid var(--link);
+    background: #f6f9fd; font-size: 15px;
+  }
+
+  h2 {
+    font-size: 22px; font-weight: 650; margin: 52px 0 18px;
+    padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+  }
+
+  ul.news { list-style: none; padding: 0; margin: 0; }
+  ul.news li { display: flex; gap: 16px; margin-bottom: 8px; }
+  ul.news .date { color: var(--muted); min-width: 82px; font-variant-numeric: tabular-nums; }
+
+  .project { margin-bottom: 30px; }
+  .project h3 { font-size: 18px; margin: 0 0 4px; font-weight: 620; }
+  .project .meta { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .project p { margin: 0 0 8px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 8px; }
+  .tag {
+    font-size: 12.5px; padding: 2px 9px; border-radius: 999px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .tag.wip { background: var(--wip-bg); color: var(--wip-text); }
+  .project .plinks { font-size: 14.5px; }
+  .project .plinks a { margin-right: 14px; }
+
+  .entry { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+  .entry .what strong { font-weight: 620; }
+  .entry .what div { color: var(--muted); font-size: 15px; }
+  .entry .when { color: var(--muted); white-space: nowrap; font-size: 15px; }
+
+  .skills { display: grid; grid-template-columns: 170px 1fr; gap: 6px 16px; }
+  .skills dt { color: var(--muted); }
+  .skills dd { margin: 0; }
+
+  footer { margin-top: 64px; color: var(--muted); font-size: 13.5px; text-align: center; }
+
+  @media (max-width: 640px) {
+    .hero { flex-direction: column; align-items: center; text-align: center; }
+    .contact-row { justify-content: center; }
+    nav .links a { margin-left: 12px; }
+    .entry { flex-direction: column; gap: 0; }
+    .skills { grid-template-columns: 1fr; }
+    .skills dt { margin-top: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="name" href="#">Bill Liu</a>
+    <div class="links">
+      <a href="#research">Research</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="hero">
+    <!-- Put your photo in the repo as photo.jpg (square works best) -->
+    <img src="photo.jpg" alt="Photo of Bill Liu">
+    <div>
+      <h1>Bill Liu</h1>
+      <p class="title">Researcher · Acadian Asset Management · Boston</p>
+
+      <p>
+        Hi, and welcome to my homepage! I'm a researcher at
+        <strong>Acadian Asset Management</strong>. My current research focuses on
+        portfolio construction, risk modeling, implementation research, equity factor
+        modeling, and using LLMs to enhance the investment process.
+      </p>
+      <p>
+        I received my Bachelor's degree in Applied Mathematics and my Master's degree in
+        Financial Engineering from Columbia University.
+      </p>
+      <div class="contact-row">
+        <a href="mailto:zl2994@columbia.edu">zl2994@columbia.edu</a>
+        <a href="https://github.com/YOUR_USERNAME">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR_PROFILE">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWS ============ -->
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="date">Jul 2025</span><span>Promoted to AVP at Acadian Asset Management.</span></li>
+    <li><span class="date">Jan 2024</span><span>Started full-time at Acadian Asset Management.</span></li>
+    <li><span class="date">Jun 2023</span><span>Joined E Fund Management as an Alpha Research intern.</span></li>
+    <li><span class="date">Dec 2022</span><span>Began a research collaboration with Ask2.ai.</span></li>
+    <li><span class="date">Jul 2022</span><span>Interned at CDI Global M&amp;A as a Research Associate.</span></li>
+    <li><span class="date">Jun 2019</span><span>Took part in the China Merchants Bank summer internship program.</span></li>
+  </ul>
+
+  <!-- ============ RESEARCH ============ -->
+  <h2 id="research">Research Projects</h2>
+
+  <div class="project">
+    <h3>Momentum in Asia</h3>
+    <div class="tags">
+      <span class="tag">Asset Pricing</span>
+    </div>
+    <p>
+      Examines whether the cross-sectional momentum effect documented in US equities
+      is present in major Asian stock markets, and how it differs across markets.
+    </p>
+    <p class="plinks">
+      <a href="#">Research note</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>Testing CAPM on Primary Asia Markets</h3>
+    <div class="tags">
+      <span class="tag">Asset Pricing</span>
+    </div>
+    <p>
+      Tests the Capital Asset Pricing Model in the primary Asian equity markets,
+      asking whether market beta explains the cross-section of expected returns.
+    </p>
+    <p class="plinks">
+      <a href="#">Research note</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>How Should CAPM Beta Be Estimated</h3>
+    <div class="tags">
+      <span class="tag">Asset Pricing</span>
+    </div>
+    <p>
+      Compares methods for estimating CAPM beta and evaluates which choices
+      give the most reliable estimates.
+    </p>
+    <p class="plinks">
+      <a href="#">Research note</a>
+      <a href="#">Code</a>
+    </p>
+  </div>
+
+  <footer>
+    © 2026 Bill Liu · Last updated November 2026
+  </footer>
+</main>
+
+</body>
+</html>
